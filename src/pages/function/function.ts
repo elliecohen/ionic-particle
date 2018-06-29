@@ -27,7 +27,20 @@ export class FunctionPage {
 
   callFunction() {
     this.particle.callFunction(this.functionName, this.functionParameter);
+
+    if (this.functionParameter === 'on'){
+      this.functionParameter = 'off';
+    } else {
+      this.functionParameter = 'on';
+    }
+
+
   }
+
+  /*turnLedOff() {
+    console.log("TURN OFF LED");
+    this.particle.callFunction(this.functionName, 'off');
+  }*/
 
   login() {
     this.navCtrl.push( LoginPage );

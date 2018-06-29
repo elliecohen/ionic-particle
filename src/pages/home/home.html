@@ -7,7 +7,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding> 
+<ion-content padding>
   <div *ngIf="!particle.token">
       Please login and select a device. <br />
       <button ion-button (click)="login()">Login</button>
@@ -15,7 +15,9 @@
   <div *ngIf="particle.token && particle.device">
       <h5>Welcome to Ellie's App! </h5>
       <p>
-        This app demonstrates how to access a Particle.io device to display its state, read events, and call functions.
+        Skin cancer is a disease that affects nearly 20% of american citizens.  It can
+        easily be prevented by adequate sunscreen use.  This app and connected sensor can
+        be used to find the UV Index, helping you know how many UV rays are reaching your skin.
       </p>
       <!-- You can display different device states by checking particle.device -->
       <p *ngIf="!particle.device || !particle.device.connected">{{particle.device.name}} is offline</p>

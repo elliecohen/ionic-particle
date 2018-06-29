@@ -30,16 +30,27 @@
       <div *ngIf="subscribed">
         <h3>Device variables</h3>
         <!--
-            Finally, we can display the variable var1, which is defined in variable.ts
+            Finally, we can display the variable uv, which is defined in variable.ts
         -->
-        <p>
-        The device variable "var1" is periodically polled, and the current value is {{var1}} 
-        </p>
+        <h5 style = "color: purple; text-align: center;">
+        The current UV index is {{uv}}
+      </h5>
       </div>
       <!-- "If we were unable to poll the variable, display an error message -->
       <div *ngIf="!subscribed">
-            The device is offline or "var1" is unavailable.
+            The device is offline or "uv" is unavailable.
       </div>
   </div>
+
+  <div *ngIf="uv <= 2">
+    <h4 style = "color: green;text-align: center;"> safe to be outdoors </h4>
+  </div>
+  <div *ngIf="uv >= 2 && uv <= 6">
+    <h4 style = "color: yellow;text-align: center;"> wear sunscreen </h4>
+  </div>
+  <div *ngIf="uv >= 6 && uv <= 11">
+    <h4 style = "color: red;text-align: center;"> seek shade or go indoors, wear sunscreen and protective clothing </h4>
+  </div>
+
 
 </ion-content>

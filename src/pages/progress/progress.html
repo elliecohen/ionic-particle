@@ -9,7 +9,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Progress</ion-title>
+    <ion-title>Information</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -19,9 +19,24 @@
       <button ion-button (click)="login()">Login</button>
   </div>
   <div *ngIf="particle.token && particle.device">
-    <h5>Progress</h5>
+    <h5>Information</h5>
     <!-- The particle-progress component subscribes to an event and updates its value from the event data -->
-    <particle-progress [event]="eventName" [min]="2" [max]="10"></particle-progress>
+    <!--<particle-progress [event]="eventName" [min]="2" [max]="10"></particle-progress> -->
+  <br><h6>UV Index</h6>
+  <p>UV Index is a scale from 1 - 11 to measure the intensity of UV rays.  </p>
+
+<!--  <br><h6>Skin Type</h6>
+  <p>The FDA (Food and Drug Administration) recognizsed 6 different skin types in regards
+  to the absorbtion of sunlight.  They are: <br>
+    <ol>
+      <li>a</li>
+      <li>d</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol></p> -->
   </div>
 
 </ion-content>

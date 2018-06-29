@@ -21,7 +21,7 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, 
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen,
     public menu: MenuController, public particle: ParticleProvider) {
     this.initializeApp();
 
@@ -30,7 +30,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Functions', component: FunctionPage },
       { title: 'Variables', component: VariablePage },
-      { title: 'Progress', component: ProgressPage }
+      { title: 'Information', component: ProgressPage }
     ];
 
   }
@@ -51,7 +51,7 @@ export class MyApp {
   }
 
   loginPage() {
-    this.menu.close();  
+    this.menu.close();
     this.nav.push(LoginPage);
   }
 

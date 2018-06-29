@@ -10,10 +10,10 @@ import { ParticleProvider } from '../../providers/particle/particle';
 })
 export class VariablePage {
 
-  public var1: any;                     // Contains the value of our cloud variable
+  public uv: any;                     // Contains the value of our cloud variable
   public subscribed: boolean = false;
   public subscription: any = null;     // Maintains the subscription variable updates
- 
+
   constructor(public navCtrl: NavController, public navParams: NavParams, public particle: ParticleProvider) {
   }
 
@@ -23,7 +23,7 @@ export class VariablePage {
     	this.login()
     }
   }
-  
+
   // Cancel any current subscriptions to our variable
   cancelSubscription() {
     if (this.subscription && this.subscription.cancel) {
@@ -33,15 +33,15 @@ export class VariablePage {
   }
 
   ionViewDidEnter() {
-    // When entering the page, subscribe to updates to the Particle cloud varibale var1
+    // When entering the page, subscribe to updates to the Particle cloud varibale uv
     if (this.particle.device) {
         this.cancelSubscription();
-        this.subscription = this.particle.pollVariable("var1").subscribe(
-            (value) => { this.var1 = value; this.subscribed = true; },
-            (error) => { console.log("Error reading var1"); this.subscribed = false; },
-            () => { console.log("Stopped polling var1"); this.subscribed = false; }
+        this.subscription = this.particle.pollVariable("uv").subscribe(
+            (value) => { this.uv = value; this.subscribed = true; },
+            (error) => { console.log("Error reading uv"); this.subscribed = false; },
+            () => { console.log("Stopped polling uv"); this.subscribed = false; }
         );
-    } 
+    }
   }
 
   login() {
