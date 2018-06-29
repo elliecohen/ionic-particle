@@ -8,6 +8,7 @@ import { LoginPage } from '../pages/login/login';
 import { FunctionPage } from '../pages/function/function';
 import { VariablePage } from '../pages/variable/variable';
 import { ProgressPage } from '../pages/progress/progress';
+import { DataPage } from '../pages/data/data';
 
 import { HomePage } from '../pages/home/home';
 
@@ -28,9 +29,10 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Functions', component: FunctionPage },
-      { title: 'Variables', component: VariablePage },
-      { title: 'Information', component: ProgressPage }
+      //{ title: 'Functions', component: FunctionPage },
+      { title: 'UV Index', component: VariablePage },
+      { title: 'Information', component: ProgressPage },
+      { title: 'Data', component: DataPage }
     ];
 
   }

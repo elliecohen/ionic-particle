@@ -9,7 +9,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Variables</ion-title>
+    <ion-title>UV Index</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -48,7 +48,7 @@
   <div *ngIf="uv >= 2 && uv <= 6">
     <h4 style = "color: yellow;text-align: center;"> wear sunscreen </h4>
   </div>
-  <div *ngIf="uv >= 6 && uv <= 11">
+  <div *ngIf="uv >= 6">
     <h4 style = "color: red;text-align: center;"> seek shade or go indoors, wear sunscreen and protective clothing </h4>
   </div>
 
